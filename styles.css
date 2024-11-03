@@ -1,0 +1,170 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+
+}
+body img{
+    max-width:100%;
+    height:auto;
+    background-size: cover;
+}
+button{
+    font-family: sans-serif;
+    
+}
+header{
+    display: flex;
+    width:90%;
+    height:10vh;
+    margin: auto;
+    align-items:center;
+}
+.logo-container, .nav-links{
+    display: flex;
+}
+.logo-container{
+    width: 30px;
+    height: 40px ;
+    margin: auto;
+    flex: 1;
+  }
+nav{
+ flex:2;}
+.nav-links{
+    justify-content: space-around;
+    list-style: none;
+    
+   }
+.nav-link{
+    color:#000000;
+    font-size: 14px;
+    text-decoration: none;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+.presentation{
+    display: flex;
+    width: 90%;
+    margin:auto;
+    min-height:80vh;
+    align-items: center;
+}
+.introduction{
+    
+    flex:1;
+}
+.intro-text h1{
+    font-size:30px;
+    font-weight: 550;
+    
+
+}
+.intro-text p{
+    margin-top:5px;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 200;
+}
+.c2a{
+  padding: 10px 0px 0px 0px; 
+  
+  
+}
+.c2as{
+    
+    background:#57FEFF;
+    border:none;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    cursor:pointer;
+    color:darkslategrey;
+    padding: 2px 0px 0px 0px;}
+.c2as a{
+    text-decoration: none;
+    color: black;}
+.cover{
+    flex:1;
+    display: flex;
+    justify-content:center;
+    height:60vh;
+}
+.cover img{
+    
+    height:100%;
+}
+.page-title h1{
+    font-size: 50px;
+    text-align: center;
+    font-family:fantasy;}
+.n01 img {
+    display: flex;}
+.n01{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.about-page h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: fantasy;
+}
+.our-story{
+    font-family:monospace;
+    font-size: 20px;
+}
+.who-are-we h1{
+    font-family: monospace;
+    font-size: 30px;
+}
+.who-are-we p1{
+    font-size: 20px;
+    font-family: monospace;
+}
+.page-contact h1{
+    text-align: center;
+font-family: fantasy;
+font-size: 45px;}
+.page-contact p1{
+    font-size: 20px;
+    font-family: monospace;
+    
+}
+.page-faq{
+    text-align: center;
+    font-family: fantasy;
+    font-size: 25px;
+}
+.faq-main{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width:1024px){
+    .presentation{
+        flex-direction: column;
+    }
+  .introduction{
+      margin-top: 5vh;
+      text-align: center;
+  }
+.intro-text h1{
+    font-size:25px;
+}
+.intro-text p{
+    font-size: 18px;
+}
+.nav-link{
+    font-size: 10px;
+
+}
+.logo-container{
+    width: 20px;
+    height: 25px;
+}
+.cover img{
+    height: 50%;
+}
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>ShoeX/About Us</title>
+    <style>
+        body {
+            background-image: url("./database/back6.jpg");
+            max-width: 100%;
+            height: auto;
+            background-size: cover;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .menulink {
+            justify-content: space-between;
+        }
+
+        .our-story,
+        .who-are-we {
+            padding: 25px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 600px) {
+            .logo-container {
+                position: absolute;
+                top: 10%;
+                width: 90px;
+                height: 50px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .nav-link {
+                margin: 5px;
+            }
+
+            .about-page {
+                text-align: center;
+                padding: 5px;
+            }
+
+            .our-story,
+            .who-are-we {
+                padding: 20px;
+            }
+
+            /* ////////////////////////////////menu ////////////////////////// */
+            /* Menu icon */
+            .menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: transparent;
+                color: white;
+                font-size: 17px;
+                cursor: pointer;
+                max-width: 50px;
+                max-height: 35px;
+                position: absolute;
+                top: 60px;
+                left: 85%;
+            }
+
+            /* Links in header */
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                border-top: 10px solid black;
+                list-style-type: none;
+                background-color: gray;
+                color: white;
+                gap: 10px;
+                padding-top: 1px;
+                align-items: center;
+                position: absolute;
+                top: 100px;
+                width: 18%;
+                left: 80%;
+                border: none;
+                z-index: 2;
+            }
+
+            .nav-link:hover {
+                background-color: black;
+                border-radius: 10%;
+                width: 60%;
+            }
+
+            /* Hover effect on menu icon */
+            .menu:hover+.nav-links,
+            .nav-links.active {
+                display: flex;
+            }
+
+            /* Hover effect on menu icon */
+            .menu:hover {
+                flex-grow: 1;
+                border: 1px solid cyan;
+                background-color: #007bff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./database/logo.png" alt="logo">
+        </div>
+        <nav>
+            <img src="vectors/menu (1).png" class="menu" alt="">
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.php">Home</a></li>
+                <li><a class="nav-link" href="showcase.html">Showcase</a></li>
+                <li><a class="nav-link" href="about.html">About us</a></li>
+                <li><a class="nav-link" href="contact.php">Contact us</a></li>
+                <li><a class="nav-link" href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-page">
+            <h1>About Us</h1>
+        </section>
+        <section class="our-story">
+            <h2>Our Story</h2>
+            <p>Our remarkable journey began when our instructor assigned us a Web design project. Little did we know
+                that this project would evolve into something extraordinary. Today, we proudly stand as the unrivaled
+                shoe showcase and shop in the entire world.</p>
+        </section>
+        <section class="who-are-we">
+            <h1>Who Are We?</h1>
+            <p style="font-family: monospace; font-size: 20px; text-align: justify;">We are ShoeX an innovative team
+                dedicated to curating the finest and most trending shoes available. Our
+                primary mission is to discover shoes that not only boast exceptional designs but also provide
+                unparalleled comfort. We believe in delivering comprehensive information about these remarkable shoes
+                directly to you.</p>
+        </section>
+    </main>
+</body>
+
+</html>
+<script>
+    // code to make the menu items stay when clicked
+    const menu = document.querySelector('.menu');
+    const menuLinks = document.querySelectorAll('.nav-links');
+    menu.addEventListener('mouseover', function () {
+        menuLinks.forEach(link => link.classList.toggle('active'));
+    });
+///////////////////////////////////////////////////////////////
+</script>

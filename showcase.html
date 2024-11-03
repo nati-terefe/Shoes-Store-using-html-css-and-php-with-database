@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ShoeX/Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url("database/back16.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .n01 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            color: black;
+            text-align: center;
+        }
+
+        .n01 h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .n01 p2 {
+            font-size: 1em;
+        }
+
+        .n01 img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .menulink {
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            top: 10%;
+            width: 50px;
+            height: 45px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .logo-container {
+                position: absolute;
+                top: 10%;
+                width: 90px;
+                height: 50px;
+            }
+
+            .page-title h1 {
+                position: absolute;
+                top: 10%;
+                left: 25%;
+                width: 50%;
+            }
+
+            .n01 {
+                margin: 30px;
+                padding: 30px;
+                font-size: 0.8em;
+            }
+
+            .n01 h2 {
+                font-size: 1.2em;
+                margin-bottom: 5px;
+            }
+
+            .n01 p2 {
+                font-size: 0.9em;
+            }
+
+            /* ////////////////////////////////menu ////////////////////////// */
+            /* Menu icon */
+            .menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: transparent;
+                color: white;
+                font-size: 17px;
+                cursor: pointer;
+                max-width: 50px;
+                max-height: 35px;
+                position: absolute;
+                top: 60px;
+                left: 85%;
+            }
+
+            /* Links in header */
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                border-top: 10px solid black;
+                list-style-type: none;
+                background-color: gray;
+                color: white;
+                gap: 10px;
+                padding-top: 1px;
+                align-items: center;
+                position: absolute;
+                top: 100px;
+                width: 18%;
+                left: 80%;
+                border: none;
+            }
+
+            .nav-link:hover {
+                background-color: black;
+                border-radius: 10%;
+                width: 60%;
+                color: white;
+            }
+
+            /* Hover effect on menu icon */
+
+            .menu:hover+.nav-links,
+            .nav-links.active {
+                display: flex;
+            }
+
+            /* Hover effect on menu icon */
+            .menu:hover {
+                flex-grow: 1;
+                border: 1px solid cyan;
+                background-color: #007bff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./database/logo.png" alt="logo">
+        </div>
+        <nav>
+            <img src="vectors/menu (1).png" class="menu" alt="">
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.php">Home</a></li>
+                <li><a class="nav-link" href="showcase.html">Showcase</a></li>
+                <li><a class="nav-link" href="about.html">About us</a></li>
+                <li><a class="nav-link" href="contact.php">Contact us</a></li>
+                <li><a class="nav-link" href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-title">
+            <h1>Showcase</h1>
+        </section>
+        <section class="n01">
+            <h2>#1 Nike Dunk Low Off-White Pine Green</h2>
+            <p2>Honourable mention for the Nike x Off-White collaboration on this beautiful pine green and orange accent
+                sneaker. Virgil Abloh pays homage to skate culture of the 1980s with his signature Off-White text on the
+                sides. The Nike Dunk Low Off-White Pine Green is in high-demand in the aftermarket space.</p2>
+            <img src="./database/shoe1.png" alt="shoe1">
+        </section>
+        <section class="n01">
+            <h2>#2 Maison Margiela Black Fusion: The single most expensive sneakers</h2>
+            <p2>This one certainly isn't for everyone. You need a certain affinity with art to truly appreciate these
+                luxury sneakers. The Maison Margiela Black Fusion are simply the most expensive sneakers on the market
+                today. The shoe is made with premium materials, of course, but then undergoes a unique and handcrafted
+                process to produce this particular look. The brand emphasizes that variations in color or details are
+                the result of the handcrafted nature of sneakers. Slight imperfections are not to be considered defects
+                but add to its value and unique character.</p2>
+            <img src="./database/shoe2.png" alt="shoe2">
+        </section>
+        <section class="n01">
+            <h2>#3 Nike MAG Back To The Future</h2>
+            <p2>Their ultra-high cut, light-up sole, and auto-lacing system were a look into, well, the future in 2015,
+                from the film's 1989 perspective. They were designed by Tinker Hatfield, and it's taken Nike 27 years to
+                make the sneakers exactly like they were in the film. But they're now here. It's been a long journey for
+                the Mags to finally come to fruition the way Hatfield had imagined them almost three decades ago, and
+                they've gone through several iterations since then, too.</p2>
+            <img src="./database/shoe3.png" alt="shoe3">
+        </section>
+        <section class="n01">
+            <h2>#4 Air Jordan 1 Prototype</h2>
+            <p2>Price: $170.<br>
+                Available 9/24 at 5:00 PM.<br>
+                Wear them high, wear them low, but just know: these "Prototype" Air Jordan 1's are ready to steal the
+                scene wherever you go.<br> Inspired by the crafted, disruptive design ethos of actual prototypes, it's a
+                fresh take on the famed sneaker that started it all for MJ.<br> Built with multi-color premium leather,
+                nubuck overlays, and bold reflective hits, the "Prototype" is setting a new standard for how to style
+                your kicks.</p2>
+            <img src="./database/shoe4.png" alt="shoe4">
+        </section>
+        <section class="n01">
+            <h2>#5 Nike Blazer Mid '77 Vintage</h2>
+            <p2>Price: $100.<br>
+                In the ‘70s, Nike was the new shoe on the block. So new in fact, we were still breaking into the
+                basketball scene and testing prototypes on the feet of our local team.<br> Of course, the design
+                improved over the years, but the name stuck. The Nike Blazer Mid ’77 Vintage—classic since the
+                beginning.</p2>
+            <img src="./database/shoe5.png" alt="shoe5">
+        </section>
+        <section class="n01">
+            <h2>#6 Nike Metcon 7</h2>
+            <p2>Price: $130.<br>
+                The Nike Metcon 7 is the gold standard for weight training—even tougher and more stable than previous
+                versions.<br> We've also added React foam that ups the comfort to keep you ready for high-intensity
+                cardio.<br> Plus, a tab locks down your laces so you can forget about them coming untied when you're
+                focused on your next PR.</p2>
+            <img src="./database/shoe6.png" alt="shoe6">
+        </section>
+        <section class="n01">
+            <h2>#7 Nike Dunk High Championship Navy</h2>
+            <p2>Price: $110.<br>
+                Available 9/23 at 5:00 PM.<br>
+                Originally created for the hardwood, the Dunk later took to the streets and as they say, the rest is
+                history.<br> More than 35 years after its debut, the silhouette still delivers bold, defiant style and
+                remains a coveted look for crews across both sport and culture.<br>Now, the college hoops OG returns
+                covered in crisp material overlays with heritage-inspired color blocking.<br> Modern footwear technology
+                brings the design's comfort into the 21st century, while a clean combination of white and navy gives
+                this makeup a classic feel, inspired by the title-winning performance of an 80's team.</p2>
+            <img src="./database/shoe7.png" alt="shoe7">
+        </section>
+        <section class="n01">
+            <h2>#8 Jordan Delta 2 3D</h2>
+            <p2>Price: $130.<br>
+                The Jordan Delta 2 offers a fresh, fearless take on the features you want: durability, comfort, and an
+                attitude that's Jordan to the core.<br> This special "3D" Jordan Delta 2 takes a wabi-sabi design
+                approach by charting a minimalist, imperfect path to the upper's scaled-back look, making it feel both
+                high-tech and handcrafted.<br> The rubber heel clip, however, is anything but scaled back, using
+                multi-layered overlapping translucent films to create a 3D effect that compliments the upper.<br> And
+                check this out: Look closely at the side of the sneaker too for a hidden Morse code message for you to
+                decode.</p2>
+            <img src="./database/shoe8.png" alt="shoe8">
+        </section>
+    </main>
+</body>
+
+</html>
+<script>
+    // code to make the menu items stay when clicked
+    const menu = document.querySelector('.menu');
+    const menuLinks = document.querySelectorAll('.nav-links');
+    menu.addEventListener('mouseover', function () {
+        menuLinks.forEach(link => link.classList.toggle('active'));
+    });
+///////////////////////////////////////////////////////////////
+</script>

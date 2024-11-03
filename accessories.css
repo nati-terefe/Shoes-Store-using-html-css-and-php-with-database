@@ -1,0 +1,1450 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('font/Cinzel-VariableFont_wght.ttf') format('truetype');
+    /* Add additional src lines for other font formats if available */
+  }
+  
+  * {
+    font-family: 'CustomFont',sans-serif;
+    font-size: 14px;
+  }
+.wrapper {
+    display: grid;
+    /* increased it more than 100 to accommodate the grids */
+    height: 350vh;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr 6fr 6fr 6fr 6fr 6fr 6fr 6fr 6fr 6fr 6fr;
+    grid-gap: 45px;
+    grid-template-areas:
+        "logo emptydiv emptydiv top "
+        "logo header header header "
+        "sidebar main main main "
+        "sidebar main main main "
+        "sidebar body1 body2 body3 "
+        "sidebar body4 body5 body6 "
+        "sidebar body7 body8 body9 "
+        "body10 body11 body12 body13 "
+        "body14 body15 body16 body17 "
+        "body18 body19 body20 body21 "
+        "body22 body23 body24 body25 "
+        "body26 body27 body28 body29 "
+        "body30 body31 body32 body33 "
+        ". . . ."
+        "footer footer footer  footer ";
+}
+
+.header {
+    grid-area: header;
+    /* background-color: rgb(255, 102, 0); */
+
+    justify-items: center;
+    align-items: center;
+    height: 0.1vh;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: transparent;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 70%;
+    width: 70%;
+    background-position: 20% 55%;
+    /* horizontal, vertical */
+}
+
+.top {
+    grid-area: top;
+    background-color: rgba(211, 211, 211, 0.103);
+    top: 20%;
+    margin-right: -10px;
+    width: 120%;
+    height: 100%;
+}
+
+.header {
+    grid-area: header;
+    /* background-color: rgb(255, 102, 0); */
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 150px;
+
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgba(211, 211, 211, 0.74);
+}
+
+.main {
+    grid-area: main;
+    background-color: rgb(0, 255, 136);
+    background-image: url(showcase2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 70%;
+}
+
+/*  <!-- /////////////////////////////////////// Male basketball //////////////////////////// --> */
+.body1 {
+    grid-area: body1;
+    background-color: rgba(17, 0, 255, 0.438);
+    background-image: url("men/basketball/mbs-black-removebg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+    /* horizontal vertical */
+
+}
+
+.price {
+    position: absolute;
+    /* to position the picture after the image */
+    /* bottom: 7px;
+    left: 42%; */
+    /* controlling the x,y */
+    /* background-color:aqua; */
+    /* padding: 5px 10px; */
+    /* border-radius: 5px; */
+    font-weight: bold;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content:space-between; */
+    border-radius: 5px;
+    padding: 130px 170px;
+
+}
+
+.info {
+    position: absolute;
+    /* to position the picture after the image */
+    /* bottom: 7px;
+    left: 42%; */
+    /* controlling the x,y */
+    /* background-color:aqua; */
+    /* padding: 5px 100px; 
+    /* border-radius: 5px; */
+    font-weight: bold;
+    /* display: flex; */
+    /* justify-content:space-between; */
+    /* align-items: center; */
+}
+
+.name {
+    position: absolute;
+    /* to position the picture after the image */
+    /* bottom: 7px;
+    left: 42%; */
+    /* controlling the x,y */
+    /* background-color:aqua; */
+    /* padding: 5px 10px;*/
+    border-radius: 15px;
+    font-weight: bold;
+    /* display: flex;
+    justify-content:flex-start; */
+    border-radius: 20px;
+    padding: 130px 5px;
+
+}
+
+
+.body2 {
+    grid-area: body2;
+    background-color: rgb(255, 0, 128);
+    background-image: url("men/basketball/mbs-black2-removebg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+
+}
+
+.body3 {
+    grid-area: body3;
+    background-color: rgba(9, 255, 0, 0.486);
+    background-image: url("men/basketball/mbs-green-removebg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body4 {
+    grid-area: body4;
+    background-color: rgba(9, 255, 0, 0.336);
+    background-image: url("men/basketball/mbs-green2-removebg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body5 {
+    grid-area: body5;
+    background-color: rgba(0, 255, 115, 0.432);
+    background-image: url("men/basketball/mbs-white-removebg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body6 {
+    grid-area: body6;
+    background-color: rgb(0, 255, 149);
+    background-image: url("men/basketball/mbs-white2-removebg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+/* <!-- //////////////////////////////////////////// male football /////////////////// --> */
+.body7 {
+    grid-area: body7;
+    background-color: rgba(0, 255, 157, 0.377);
+    background-image: url("men/football/mfs-black.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body8 {
+    grid-area: body8;
+    background-color: rgba(255, 166, 0, 0.719);
+    background-image: url("men/football/mfs-black2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body9 {
+    grid-area: body9;
+    background-color: rgb(255, 0, 0);
+    background-image: url("men/football/mfs-white.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body10 {
+    grid-area: body10;
+    background-color: rgba(94, 255, 0, 0.829);
+    background-image: url("men/football/mfs-white2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body11 {
+    grid-area: body11;
+    background-color: rgb(0, 255, 136);
+    background-image: url("men/football/mfs-white3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+/* ///////////////////////////////////// male running ///////////////////////////  */
+.body12 {
+    grid-area: body12;
+    background-color: rgb(255, 0, 128);
+    background-image: url("men/running/mrs-black.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body13 {
+    grid-area: body13;
+    background-color: rgb(255, 0, 0);
+    background-image: url("men/running/mrs-green.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body14 {
+    grid-area: body14;
+    background-color: rgb(140, 0, 255);
+    background-image: url("men/running/mrs-green2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body15 {
+    grid-area: body15;
+    background-color: rgba(0, 255, 115, 0.432);
+    background-image: url("men/running/mrs-white.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body16 {
+    grid-area: body16;
+    background-color: rgb(0, 255, 149);
+    background-image: url("men/running/mrs-white2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+/* <!-- ////////////////////////////////////// female running /////////////////////// --> */
+.body17 {
+    grid-area: body17;
+    background-color: rgba(0, 255, 157, 0.377);
+    background-image: url("female/running/frs-white.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body18 {
+    grid-area: body18;
+    background-color: rgba(255, 166, 0, 0.719);
+    background-image: url("female/running/frs-white2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body19 {
+    grid-area: body19;
+    background-color: rgb(255, 0, 0);
+    background-image: url("female/running/frs-pink.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body20 {
+    grid-area: body20;
+    background-color: rgba(255, 94, 0, 0.521);
+    background-image: url("female/running/frs-pink2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body21 {
+    grid-area: body21;
+    background-color: rgba(94, 255, 0, 0.548);
+    background-image: url("female/running/frs-pink3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+/* <!-- /////////////////////////////////// female tennis /////////////////////////// --> */
+.body22 {
+    grid-area: body22;
+    background-color: rgba(25, 0, 255, 0.425);
+    background-image: url("female/tennis/fts-black.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body23 {
+    grid-area: body23;
+    background-color: rgba(0, 217, 255, 0.829);
+    background-image: url("female/tennis/fts-black2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body24 {
+    grid-area: body24;
+    background-color: rgba(255, 0, 0, 0.829);
+    background-image: url("female/tennis/fts-black3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body25 {
+    grid-area: body25;
+    background-color: rgba(255, 0, 221, 0.829);
+    background-image: url("female/tennis/fts-pink.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body26 {
+    grid-area: body26;
+    background-color: rgba(94, 255, 0, 0.829);
+    background-image: url("female/tennis/fts-pink2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+/* <!-- //////////////////////////////////////////// accessories /////////////////// --> */
+.body1 {
+    grid-area: body1;
+    background-color: rgba(0, 119, 255, 0.637);
+    background-image: url("accessories/accessories-black.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body2 {
+    grid-area: body2;
+    background-color: rgba(251, 255, 0, 0.829);
+    background-image: url("accessories/accessories-black2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10%;
+    width: 10%;
+    background-position: 50% 65%;
+}
+
+.body3 {
+    grid-area: body3;
+    background-color: rgba(255, 0, 98, 0.829);
+    background-image: url("accessories/accessories-black3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body4 {
+    grid-area: body4;
+    background-color: rgba(255, 196, 0, 0.829);
+    background-image: url("accessories/accessories-black4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 65%;
+}
+
+.body5 {
+    grid-area: body5;
+    background-color: rgba(0, 140, 255, 0.829);
+    background-image: url("accessories/accessories-green.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20%;
+    width: 20%;
+    background-position: 50% 65%;
+}
+
+.body6 {
+    grid-area: body6;
+    background-color: rgba(94, 255, 0, 0.829);
+    background-image: url("accessories/accessories-white.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20%;
+    width: 20%;
+    background-position: 50% 60%;
+}
+
+.body7 {
+    grid-area: body7;
+    background-color: rgba(0, 89, 255, 0.829);
+    background-image: url("accessories/accessories-white2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20%;
+    width: 20%;
+    background-position: 50% 40%;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #30343f;
+    width: 150%;
+
+
+}
+
+
+
+
+
+
+
+/* footer social icon */
+.lin {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: absolute;
+    top: 345%;
+    right: 80px;
+
+
+
+}
+
+.in {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex: 1;
+    position: absolute;
+    flex-direction: column;
+    position: absolute;
+    top: 345%;
+    right: 139px;
+
+
+
+}
+
+.tw {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex: 1;
+    position: absolute;
+    flex-direction: column;
+
+    position: absolute;
+    top: 345%;
+    right: 30px;
+
+
+}
+
+/* footer payment icon */
+.amex {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: absolute;
+    top: 345%;
+    right: 1290px;
+
+
+
+}
+
+.visa {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex: 1;
+    position: absolute;
+    flex-direction: column;
+    position: absolute;
+    top: 345%;
+    right: 1230px;
+
+}
+
+.paypal {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex: 1;
+    position: absolute;
+    flex-direction: column;
+
+    position: absolute;
+    top: 345%;
+    right: 1160px;
+}
+
+.header a {
+    color: black;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+
+.cart {
+    max-width: 35px;
+    /* Adjust the width as needed */
+    max-height: 35px;
+    /* Adjust the height as needed */
+    text-decoration: none;
+
+}
+
+.user {
+    max-width: 35px;
+    /* Adjust the width as needed */
+    max-height: 35px;
+    /* Adjust the height as needed */
+    position: absolute;
+    top: 12%;
+    right: 8%;
+}
+
+.top {
+
+
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    /* padding: 20px; */
+    font-size: 18px;
+    font-weight: lighter;
+    /* margin-left: 200px; */
+}
+
+.top a {
+    color: black;
+    text-decoration: none;
+    margin-right: 40px;
+    /* margin-left: 12px;   */
+}
+
+/* Set width and height for body grid items */
+.body1, .body2, .body3, .body4, .body5, .body6, .body7, .body8, .body9,
+.body10, .body11, .body12, .body13, .body14, .body15, .body16, .body17, .body18, .body19,
+.body20, .body21, .body22, .body23, .body24, .body25, .body26, .body27, .body28, .body29,
+.body30, .body31, .body32, .body33 {
+    width: 100%;
+    height: 115%;
+}
+
+.filter-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    margin-bottom: 10px;
+    color: black;
+    border: 2px solid white;
+    border-radius: 50vh;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.color-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    border-radius: 50vh;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.color-button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* .body1 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  } */
+/* .price {
+      font-weight: bold;
+      margin-top: 10px;
+    } */
+
+.body1 img, .body2 img, .body3 img, .body4 img, .body5 img, .body6 img, .body7 img, .body8 img, .body9 img,
+.body10 img, .body11 img, .body12 img, .body13 img, .body14 img, .body15 img, .body16 img, .body17 img, .body18 img, .body19 img,
+.body20 img, .body21 img, .body22 img, .body23 img, .body24 img, .body25 img, .body26 img, .body27 img, .body28 img, .body29 img,
+.body30 img, .body31 img, .body32 img, .body33 img {
+    width: 100%;
+    height: 115%;
+}
+
+.body1:hover,
+.body2:hover,
+.body3:hover,
+.body4:hover,
+.body5:hover,
+.body6:hover,
+.body7:hover,
+.body8:hover,
+.body9:hover,
+.body10:hover,
+.body11:hover,
+.body12:hover,
+.body13:hover,
+.body14:hover,
+.body15:hover,
+.body16:hover,
+.body17:hover,
+.body18:hover,
+.body19:hover,
+.body20:hover,
+.body21:hover,
+.body22:hover,
+.body23:hover,
+.body24:hover,
+.body25:hover,
+.body26:hover,
+.body27:hover,
+.body28:hover,
+.body29:hover,
+.body30:hover,
+.body31:hover,
+.body32:hover,
+.body33:hover {
+    background-color: whitesmoke;
+}
+
+
+
+.cart-counter {
+    position: absolute;
+    top: 100px;
+    right: 14.5%;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 50%;
+}
+
+.cart {
+    position: absolute;
+    top: 75px;
+    right: 15%;
+}
+
+.button {
+    display: list-item;
+    /* align-items: end;  */
+    /* justify-content: flex-end;  */
+    padding: 20px;
+    font-size: 18px;
+    font-weight: lighter;
+    /* margin-left: 200px; */
+}
+
+.buttom a {
+    color: white;
+    text-decoration: none;
+
+    display: list-item;
+    padding: 10px 500px;
+    /* top: 10px; */
+}
+
+
+
+.buttom h1 {
+    color: white;
+    margin-left: 500px;
+    font-size: 20px;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+.h2 {
+    position: absolute;
+    top: 2135px;
+    right: 300px;
+}
+
+/* .link2{
+    text-decoration: none;
+    position: absolute;
+    top: 2185px;
+    left: 270px;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+} */
+
+.footer .link2 {
+    text-decoration: none;
+    color: black;
+    padding: 1px;
+    position: absolute;
+    top: 2185px;
+    left: 950px;
+    list-style: none;
+}
+
+.footer a.link2 {
+    color: black;
+    text-decoration: none;
+
+
+}
+
+.menu {
+    display: none;
+}
+
+.menulink {
+    justify-content: space-between;
+}
+.body1,
+.body2,
+.body3,
+.body4,
+.body5,
+.body6,
+.body7,
+.body8,
+.body9,
+.body10,
+.body11,
+.body12,
+.body13,
+.body14,
+.body15,
+.body16,
+.body17,
+.body18,
+.body19,
+.body20,
+.body21,
+.body22,
+.body23,
+.body24,
+.body25,
+.body26,
+.body27,
+.body28,
+.body29,
+.body30,
+.body31,
+.body32,
+.body33 {
+  background-color:#E4D9ff;;
+}
+@media (max-width: 768px) {
+    .wrapper {
+        grid-gap: 20px;
+        padding: 10px;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "top"
+            "logo"
+            "header"
+            "sidebar"
+            "main"
+            "body1"
+            "body2"
+            "body3"
+            "body4"
+            "body5"
+            "body6"
+            "body7"
+            "body8"
+            "body9"
+            "body10"
+            "body11"
+            "body12"
+            "body13"
+            "body14"
+            "body15"
+            "body16"
+            "body17"
+            "body18"
+            "body19"
+            "body20"
+            "body21"
+            "body22"
+            "body23"
+            "body24"
+            "body25"
+            "body26"
+            "body27"
+            "body28"
+            "body29"
+            "body30"
+            "body31"
+            "body32"
+            "body33"
+            "footer";
+    }
+
+    .body1,
+    .body2,
+    .body3,
+    .body4,
+    .body5,
+    .body6,
+    .body7,
+    .body8,
+    .body9,
+    .body10,
+    .body11,
+    .body12,
+    .body13,
+    .body14,
+    .body15,
+    .body16,
+    .body17,
+    .body18,
+    .body19,
+    .body20,
+    .body21,
+    .body22,
+    .body23,
+    .body24,
+    .body25,
+    .body26,
+    .body27,
+    .body28,
+    .body29,
+    .body30,
+    .body31,
+    .body32,
+    .body33 {
+        background-position: 50% 70%;
+        width: 65%;
+        height: 170%;
+        background-position: 50% 55%;
+    }
+
+    .main {
+        grid-area: main;
+        background-image: url("showcase2.png");
+        width: 35%;
+        height: 700%;
+        position: relative;
+        top: 5px;
+        left: -20px;
+    }
+
+    .footer {
+        grid-area: footer;
+        width: 40%;
+        height: 100%;
+        position: relative;
+        top: 300px;
+        left: -10px;
+    }
+
+    .h1 {
+        position: relative;
+        top: 150px;
+        left: -500px;
+        color: white;
+    }
+
+    .buttom {
+        position: relative;
+        top: 10px;
+        left: -500px;
+        color: white;
+    }
+.buttom a{
+    color: white;
+}
+.link2{
+    color: white;
+}
+    .h2 {
+        position: absolute;
+        top: -20px;
+        left: 270px;
+        color: white;
+    }
+
+    .footer .link2 {
+        text-decoration: none;
+        color: black;
+        padding: 1px;
+        position: absolute;
+        top: 50px;
+        left: 790px;
+        color: white;
+    }
+
+    .lin {
+        display: none;
+    }
+
+    .in {
+        display: none;
+
+
+
+    }
+
+    .tw {
+        display: none;
+
+
+    }
+
+    /* footer payment icon */
+    .amex {
+        display: none;
+
+
+
+    }
+
+    .visa {
+        display: none;
+
+    }
+
+    .paypal {
+        display: none;
+
+
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        width: 30%;
+        height: 100%;
+    }
+
+
+    /* ////////////////////////////////menu ////////////////////////// */
+    /* Menu icon */
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        max-width: 50px;
+        max-height: 50px;
+        position: relative;
+        top: 3px;
+        right: 180px;
+    }
+
+    /* Links in header */
+    .header .menulink {
+        display: none;
+        flex-direction: column;
+        border-top: 10px solid black;
+        list-style-type: none;
+        background-color: gray;
+        color: white;
+        gap: 10px;
+        padding-top: 1px;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        width: 45%;
+        left: -10px;
+        border: none;
+    }
+
+    /* Hover effect on menu icon */
+
+    .menu:hover+.menulink,
+    .menulink.active {
+        display: flex;
+    }
+
+    /* Hover effect on menu icon */
+    .menu:hover {
+        flex-grow: 1;
+        border: 1px solid cyan;
+        background-color: #007bff;
+    }
+
+    .top {
+        display: none;
+    }
+
+    /* ///////////////////////////////////////////////////////////////////// */
+    .logo {
+        position: relative;
+        top: 50px;
+        right: 380px;
+    }
+
+    .cart-counter {
+        position: absolute;
+        top: 85px;
+        right: 75px;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 3px 5px;
+        border-radius: 50%;
+    }
+
+    .cart {
+        max-width: 35px;
+        /* Adjust the width as needed */
+        max-height: 35px;
+        /* Adjust the height as needed */
+        position: relative;
+        top: 3%;
+        right: 270px;
+
+    }
+
+    .user {
+        max-width: 35px;
+        /* Adjust the width as needed */
+        max-height: 35px;
+        /* Adjust the height as needed */
+        position: relative;
+        top: 3%;
+        right: 499px;
+
+    }
+
+}
+
+/* tablet responsive */
+
+@media (min-width: 481px) and (max-width: 1024px){
+    .wrapper {
+        grid-gap: 20px;
+        padding: 10px;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "top"
+            "logo"
+            "header"
+            "sidebar"
+            "main"
+            "body1"
+            "body2"
+            "body3"
+            "body4"
+            "body5"
+            "body6"
+            "body7"
+            "body8"
+            "body9"
+            "body10"
+            "body11"
+            "body12"
+            "body13"
+            "body14"
+            "body15"
+            "body16"
+            "body17"
+            "body18"
+            "body19"
+            "body20"
+            "body21"
+            "body22"
+            "body23"
+            "body24"
+            "body25"
+            "body26"
+            "body27"
+            "body28"
+            "body29"
+            "body30"
+            "body31"
+            "body32"
+            "body33"
+            "footer";
+    }
+
+    .body1,
+    .body2,
+    .body3,
+    .body4,
+    .body5,
+    .body6,
+    .body7,
+    .body8,
+    .body9,
+    .body10,
+    .body11,
+    .body12,
+    .body13,
+    .body14,
+    .body15,
+    .body16,
+    .body17,
+    .body18,
+    .body19,
+    .body20,
+    .body21,
+    .body22,
+    .body23,
+    .body24,
+    .body25,
+    .body26,
+    .body27,
+    .body28,
+    .body29,
+    .body30,
+    .body31,
+    .body32,
+    .body33 {
+        background-position: 50% 70%;
+        width: 65%;
+        height: 170%;
+        background-position: 50% 55%;
+    }
+
+    .main {
+        grid-area: main;
+        background-image: url("showcase2.png");
+        width: 35%;
+        height: 700%;
+        position: relative;
+        top: 5px;
+        left: -20px;
+    }
+
+    .footer {
+        grid-area: footer;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 300px;
+        left: -10px;
+    }
+
+    .h1 {
+        position: relative;
+        top: 150px;
+        left: -500px;
+        color: white;
+    }
+
+    .buttom {
+        position: relative;
+        top: 10px;
+        left: -500px;
+        color: white;
+    }
+.buttom a{
+    color: white;
+}
+.link2{
+    color: white;
+}
+    .h2 {
+        position: absolute;
+        top: -20px;
+        left: 270px;
+        color: white;
+    }
+
+    .footer .link2 {
+        text-decoration: none;
+        color: black;
+        padding: 1px;
+        position: absolute;
+        top: 50px;
+        left: 790px;
+        color: white;
+    }
+
+    .lin {
+        display: none;
+    }
+
+    .in {
+        display: none;
+
+
+
+    }
+
+    .tw {
+        display: none;
+
+
+    }
+
+    /* footer payment icon */
+    .amex {
+        display: none;
+
+
+
+    }
+
+    .visa {
+        display: none;
+
+    }
+
+    .paypal {
+        display: none;
+
+
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* ////////////////////////////////menu ////////////////////////// */
+    /* Menu icon */
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        max-width: 50px;
+        max-height: 50px;
+        position: relative;
+        top: 3px;
+        right: 180px;
+    }
+
+    /* Links in header */
+    .header .menulink {
+        display: none;
+        flex-direction: column;
+        border-top: 10px solid black;
+        list-style-type: none;
+        background-color: gray;
+        color: white;
+        gap: 10px;
+        padding-top: 1px;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        width: 45%;
+        left: -10px;
+        border: none;
+    }
+
+    /* Hover effect on menu icon */
+
+    .menu:hover+.menulink,
+    .menulink.active {
+        display: flex;
+    }
+
+    /* Hover effect on menu icon */
+    .menu:hover {
+        flex-grow: 1;
+        border: 1px solid cyan;
+        background-color: #007bff;
+    }
+
+    .top {
+        display: none;
+    }
+
+    /* ///////////////////////////////////////////////////////////////////// */
+    .logo {
+        position: relative;
+        top: 50px;
+        right: 380px;
+    }
+
+    .cart-counter {
+        position: absolute;
+        top: 85px;
+        right: 150px;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 3px 5px;
+        border-radius: 50%;
+    }
+
+    .cart {
+        max-width: 35px;
+        /* Adjust the width as needed */
+        max-height: 35px;
+        /* Adjust the height as needed */
+        position: relative;
+        top: 3%;
+        right: -40px;
+
+    }
+
+    .user {
+        max-width: 35px;
+        /* Adjust the width as needed */
+        max-height: 35px;
+        /* Adjust the height as needed */
+        position: relative;
+        top: 3%;
+        right: 200px;
+
+    }
+
+
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ShoeX/FAQ</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url("database/back18.jpg");
+      background-size: cover;
+      background-repeat: repeat;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .menulink {
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      top: 10%;
+      width: 50px;
+      height: 45px;
+    }
+
+    .nav-links {
+      text-align: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .page-faq {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .page-faq h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .collapsible {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      padding: 20px;
+      width: 50%;
+      left: 25%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      position: relative;
+      margin-top: 10px;
+    }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #099ae3;
+      width: 50%;
+      left: 25%;
+      position: relative;
+      text-align: center;
+    }
+
+    .collapsible:after {
+      content: '\02795';
+      /* Unicode character for "plus" sign (+) */
+      font-size: 13px;
+      color: white;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .active:after {
+      content: "\2796";
+      /* Unicode character for "minus" sign (-) */
+    }
+
+    /* Mobile Styles */
+    @media only screen and (max-width: 600px) {
+      .logo-container {
+        position: absolute;
+        top: 10%;
+        width: 90px;
+        height: 50px;
+      }
+
+      .page-faq {
+        padding: 10px;
+      }
+
+      .page-faq h1 {
+        font-size: 20px;
+      }
+
+      .collapsible {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      /* ////////////////////////////////menu ////////////////////////// */
+      /* Menu icon */
+      .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        max-width: 50px;
+        max-height: 35px;
+        position: absolute;
+        top: 60px;
+        left: 85%;
+      }
+
+      /* Links in header */
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        border-top: 10px solid black;
+        list-style-type: none;
+        background-color: gray;
+        color: white;
+        gap: 10px;
+        padding-top: 1px;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        width: 18%;
+        left: 80%;
+        border: none;
+        z-index: 2;
+        /* to give it priority over the dropdown */
+      }
+
+      .nav-link:hover {
+        background-color: black;
+        border-radius: 10%;
+        width: 60%;
+      }
+
+      /* Hover effect on menu icon */
+      .menu:hover+.nav-links,
+      .nav-links.active {
+        display: flex;
+      }
+
+      /* Hover effect on menu icon */
+      .menu:hover {
+        flex-grow: 1;
+        border: 1px solid cyan;
+        background-color: #007bff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="./database/logo.png" alt="logo">
+    </div>
+    <nav>
+      <img src="vectors/menu (1).png" class="menu" alt="">
+      <ul class="nav-links">
+        <li class="nav-link-li"><a class="nav-link" href="index.php">Home</a></li>
+        <li class="nav-link-li"><a class="nav-link" href="showcase.html">Showcase</a></li>
+        <li class="nav-link-li"><a class="nav-link" href="about.html">About us</a></li>
+        <li class="nav-link-li"><a class="nav-link" href="contact.php">Contact us</a></li>
+        <li class="nav-link-li"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="page-faq">
+      <h1>F A Q</h1>
+    </section>
+    <button type="button" class="collapsible">1. Where can we buy the shoes in the showcase?</button>
+    <div class="content">
+      <p>You can use the name provided and search it on the brand's website.</p>
+    </div>
+    <button type="button" class="collapsible">2. How often do you update your showcase?</button>
+    <div class="content">
+      <p>Weekly.</p>
+    </div>
+    <button type="button" class="collapsible">3. How do you find the trend?</button>
+    <div class="content">
+      <p>We have a team specifically for this purpose.</p>
+    </div>
+    <button type="button" class="collapsible">4. How can we contact you?</button>
+    <div class="content">
+      <p>First, check the FAQ. If your question is not there, use the "Contact us" tab and follow the instructions.</p>
+    </div>
+    <button type="button" class="collapsible">5. Where is ShoeX Located?</button>
+    <div class="content">
+      <p>We are Located in Addiss Ababa, Ethiopia, Africa</p>
+    </div>
+    <button type="button" class="collapsible">6. When was ShoeX Established?</button>
+    <div class="content">
+      <p>ShoeX was Established during winter of 2022.</p>
+    </div>
+  </main>
+</body>
+
+</html>
+
+<script>
+  // ////////////////////////////////////// code for collapsible //////////////////////
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  var coll = document.getElementsByClassName("collapsible2");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  var coll = document.getElementsByClassName("collapsible3");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  var coll = document.getElementsByClassName("collapsible4");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  // code to make the menu items stay when clicked
+  const menu = document.querySelector('.menu');
+  const menuLinks = document.querySelectorAll('.nav-links');
+  menu.addEventListener('mouseover', function () {
+    menuLinks.forEach(link => link.classList.toggle('active'));
+  });
+///////////////////////////////////////////////////////////////
+</script>

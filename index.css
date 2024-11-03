@@ -1,0 +1,1658 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('font/Cinzel-VariableFont_wght.ttf') format('truetype');
+  /* Add additional src lines for other font formats if available */
+}
+
+* {
+  font-family: 'CustomFont',sans-serif;
+  font-size: 16.5px;
+}
+
+
+.wrapper {
+
+  display: grid;
+  height: 270vh;
+  /* increased it more than 100 to accommodate the grids */
+  grid-template-rows: 0.1fr 1fr 0.2fr;
+  grid-gap: 1px;
+  
+
+  /* display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 50px;
+	
+		position: fixed;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0);
+		color: #f1f1f1;
+		width: 100%;
+		padding:190px 50px; */
+}
+.menu{display:none}
+.upper {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  grid-template-rows: 0.7fr;
+  grid-template-areas:
+    "top top"
+    "logo header";
+  height: 10vh;
+}
+
+.middle {
+  display: grid;
+
+  grid-template-columns: 0.7fr 0.7fr 0.7fr 0.7fr;
+  grid-template-rows: 10fr 3fr 5fr;
+  grid-template-areas:
+    "body1 body1 body1 body1"
+    "body2 body3  body4 body5"
+    "body6 body6  body6 body6";
+  grid-gap: 70px;
+}
+
+.sub {
+  grid-gap: 20px;
+  display: grid;
+  height: 80vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 10fr 10fr 1fr;
+  grid-template-areas:
+    ". . . ."
+    "body7 body8 body8 body8"
+    "body9 body9 body9 body9"
+    ". . . .";
+
+}
+
+.lower {
+  display: grid;
+  height: 30vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20fr;
+  grid-template-areas: "footer footer"
+
+}
+
+.cart-counter {
+  position: relative;
+    top: 15px;
+    right: -10%;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 50%;
+}
+
+.btnshop {
+  position: relative;
+  /* to position the picture after the image */
+  top: 390px;
+  left: 80%;
+  padding: 14px 72px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color:#273469;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnshowcase {
+  position: relative;
+  /* to position the picture after the image */
+  top: 182px;
+  left: 85%;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color:#273469;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnmen {
+  position: relative;
+  /* to position the picture after the image */
+  top: 160px;
+  left: 70%;
+  padding: 14px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color:#273469;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnfemale {
+  position: relative;
+  /* to position the picture after the image */
+  top: 160px;
+  left: 70%;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color:#273469;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnaccessories {
+  position: relative;
+  /* to position the picture after the image */
+  top: 160px;
+  left: 82%;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color:#273469;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+  background-color: #1e2749;
+}
+
+.logo {
+  grid-area: logo;
+  /* background-color: rgb(110, 42, 165); */
+}
+
+.header {
+  grid-area: header;
+  /* background-color: rgb(255, 102, 0); */
+
+  justify-items: center;
+  align-items: center;
+}
+
+/* .sidebar {
+    grid-area: sidebar;
+    background-color: rgb(24, 0, 161);
+} */
+.top {
+  grid-area: top ;
+  background-color: rgba(211, 211, 211, 0.808);
+  
+}
+
+.body1 {
+  grid-area: body1;
+  background-color: transparent;
+
+}
+
+.body2 {
+  grid-area: body2;
+  background-color: rgba(0, 255, 115, 0.432);
+  background-image: url("men/basketball/mbs-white-removebg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 55%;
+}
+
+.body3 {
+  grid-area: body3;
+  background-color: #E4D9ff;
+
+
+}
+
+.body4 {
+  grid-area: body4;
+  background-color: rgb(0, 255, 149);
+  background-image: url("men/basketball/mbs-white2-removebg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 57%;
+}
+
+.body5 {
+  grid-area: body5;
+  background-color: rgba(9, 255, 0, 0.486);
+  background-image: url("men/basketball/mbs-green-removebg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 65%;
+}
+
+.body6 {
+  grid-area: body6;
+  background-color: rgba(0, 38, 255, 0.562);
+
+}
+
+.body7 {
+  grid-area: body7;
+  background-color: rgb(247, 0, 255);
+}
+
+.body8 {
+  grid-area: body8;
+  background-color: rgba(0, 255, 128, 0.562);
+}
+
+.body9 {
+  grid-area: body9;
+  background-color: rgba(179, 255, 0, 0.562);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #30343f;
+  
+}
+
+.middle .body3 {
+  background-color: #E4D9ff;
+  background-image: url("female/tennis/fts-black3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 60%;
+  /* horizontal, vertical */
+}
+
+.middle .body3 .shoe-price {
+  position: absolute;
+  /* to position the picture after the image */
+  top: 152%;
+  left: 43%;
+  /* controlling the x,y */
+
+  background-color: #273469;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.title_body3 {
+  position: absolute;
+  font-size: 15px;
+  top: 152%;
+  left: 27%;
+}
+
+
+.shoe-price2 {
+  position: absolute;
+  /* to position the picture after the image */
+  top: 152%;
+  left: 18%;
+  /* controlling the x,y */
+
+  background-color: #273469;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.title_body2 {
+  position: absolute;
+  font-size: 15px;
+  top: 152%;
+  left: 1%;
+}
+
+.shoe-price4 {
+  position: absolute;
+  /* to position the picture after the image */
+  top: 152%;
+  left: 70%;
+  /* controlling the x,y */
+
+  background-color: #273469;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.title_body4 {
+  position: absolute;
+  font-size: 15px;
+  top: 152%;
+  left: 52%;
+}
+
+
+.shoe-price5 {
+  position: absolute;
+  /* to position the picture after the image */
+  top: 152%;
+  left: 95%;
+  /* controlling the x,y */
+
+  background-color: #273469;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.title_body5 {
+  position: absolute;
+  font-size: 15px;
+  top: 152%;
+  left: 79%;
+}
+
+/* .middle .body1{
+    background-image: url(combined.gif);
+    background-repeat: no-repeat;
+	background-size:cover;
+	height: 100%;
+	width: 100%;
+    background-position: 50% 70%;  
+    horizontal, vertical 
+} */
+.body6 {
+  /* background-image: url(bg2.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 70%;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.body7 {
+  background-image: url(bgmen.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 15%;
+  /* horizontal, vertical */
+}
+
+.body8 {
+  background-image: url(bgwomen.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 10%;
+}
+
+.body9 {
+  background-image: url(showcase.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: 20% 55%;
+  /* horizontal, vertical */
+}
+
+.logo {
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  background-position: 20% 55%;
+  /* horizontal, vertical */
+}
+
+/* to order the navigation bar correctly */
+.header {
+  grid-area: header;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 350px;
+}
+
+
+.header a {
+  color: black;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* fixed header */
+/* .header {
+  position: fixed;
+  z-index: 999;
+} */
+
+/* .header h1 {
+    color: white;
+    position: 50% 55%;
+  } */
+.cart {
+  max-width: 35px;
+  /* Adjust the width as needed */
+  max-height: 35px;
+  /* Adjust the height as needed */
+  position: absolute;
+  right: 15%;
+}
+
+.user {
+  max-width: 35px;
+  /* Adjust the width as needed */
+  max-height: 35px;
+  /* Adjust the height as needed */
+  position: absolute;
+    top: 90%;
+    right: 8%;
+}
+
+.top a {
+  color: black;
+  text-decoration: none;
+  margin-right: 40px;
+  height: -220%;
+
+  /* margin-left: 12px;   */
+}
+
+.top {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  /* padding: 20px; */
+  font-size: 18px;
+  font-weight: lighter;
+  /* margin-left: 200px; */
+  background-color: rgba(211, 211, 211, 0.288);
+  width: 35%;
+/*  height: 200%; */
+  position: relative;
+  left: 830px;
+  top: -1px;
+  
+}
+
+/* main body social icon */
+.link {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: absolute;
+  top: 35%;
+  right: 60px;
+
+
+
+}
+
+.insta {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex: 1;
+  position: absolute;
+  flex-direction: column;
+  position: absolute;
+  top: 45%;
+  right: 60px;
+
+
+
+}
+
+.twit {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex: 1;
+  position: absolute;
+  flex-direction: column;
+
+  position: absolute;
+  top: 55%;
+  right: 60px;
+
+
+}
+
+/* footer social icon */
+.lin {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: absolute;
+  top: 260%;
+  right: 80px;
+}
+
+.in {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex: 1;
+  position: absolute;
+  flex-direction: column;
+  position: absolute;
+  top: 200%;
+  right: 139px;
+  z-index: 2;
+}
+
+.tw {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex: 1;
+  position: absolute;
+  flex-direction: column;
+
+  position: absolute;
+  top: 260%;
+  right: 30px;
+}
+
+/* footer payment icon */
+.amex {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: absolute;
+  top: 315%;
+  left: 50px;
+}
+
+.visa {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex: 1;
+  position: absolute;
+  flex-direction: column;
+  position: absolute;
+  top: 305%;
+  left: 50px;
+
+}
+
+.paypal {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex: 1;
+  position: absolute;
+  flex-direction: column;
+
+  position: absolute;
+  top: 295%;
+  left: 50px;
+
+
+}
+
+
+
+.buttom a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+
+  display: list-item;
+  padding: 10px 500px;
+  width: 10%;
+  /* top: 10px; */
+  color: white;
+}
+
+.buttom {
+  background-color: transparent;
+  width: 100px;
+}
+
+.buttom h1 {
+  margin-left: 500px;
+  font-size: 20px;
+  color: white;
+  
+}
+
+.h2 {
+  position: relative;
+  top: -535px;
+  left: -250px;
+  color: white;
+}
+
+
+.footer .link2 {
+  list-style: none;
+   text-decoration: none;
+    color: black;
+    padding: 1px;
+    position: relative;
+    top: -520px;
+    left: 250px;
+    color: white;
+}
+
+.footer a.link2 {
+  color: black;
+  text-decoration: none;
+  color: white;
+}
+.sws {
+  list-style: none;
+  position: relative;
+  top: -350px;
+  left: 285px;
+  color: white;
+}
+.shoppingpolicy {
+  list-style: none;
+  position: relative;
+  top: -330px;
+  left: 300px;
+  color: white;
+}
+.Pm{
+  list-style: none;
+  position: relative;
+  top: -320px;
+  left: 300px;
+  color: white;
+}
+.sg{
+  list-style: none;
+  position: relative;
+  top: -320px;
+  left: 300px;
+  color: white;
+}
+.fotter.twit{
+  top: 1670px;
+  left: 800px;
+}
+.toppicks{
+  position: relative;
+  top: 30px;
+  left: 550px;
+  font-size: 35px; 
+}
+.body2:hover,
+.body3:hover,
+.body4:hover,
+.body5:hover {
+  background-color: whitesmoke;
+}
+#shoexdesc{
+  font-family: cursive;
+  font-weight: lighter;
+  position: relative;
+  top: 250px;
+  left: 50px;
+}
+/* 
+#myVideo {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 50%;
+	min-height: 20%;
+    
+	
+  } */
+
+.video-container {
+  position: relative;
+  width: 100vw;
+  /* Use viewport units instead of a percentage */
+  height: 70px;
+
+  padding-bottom: 30%;
+  /* Adjust the padding-bottom value as per your requirement */
+  /* overflow: hidden;   */
+  /* Hide any overflowing content */
+  z-index: 2;
+}
+
+.video-container video {
+  position: absolute;
+  top: 10%;
+  /* to revert back make top:30 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center the video horizontally and vertically */
+  width: 100%;
+  height: 250%;
+  object-fit: covers;
+}
+
+.body1 {
+  position: relative;
+  z-index: 0;
+}
+
+.upper {
+  position: relative;
+  z-index: 2;
+}
+
+
+.btnshop {
+  position: relative;
+  z-index: 3;
+  /* to keep it in front of other elements */
+}
+
+.menu {
+  display: none;
+}
+
+.menulink {
+  justify-content: space-between;
+}
+.menulink a{
+  margin-left: 15px;
+}
+.body1 p{
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  font-size: larger;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  z-index: 3;
+}
+.body2,
+.body3,
+.body4,
+.body5 {
+  background-color: #E4D9ff;
+}
+@media (max-width: 480px) {
+  #shoexdesc{
+    display: none;
+  }
+  
+  .upper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "logo"
+      "header"
+      "top";
+  }
+
+  .middle {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "body1"
+      "body2"
+      "body3"
+      "body4"
+      "body5"
+      "body6";
+  }
+
+  .sub {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "body7"
+      "body8"
+      "body9";
+  }
+
+  /* ////////////////////////////////menu ////////////////////////// */
+/* Menu icon */
+.menu {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color:transparent;
+color: white;
+font-size: 17px;
+cursor: pointer;
+max-width: 50px;
+max-height: 50px;
+position: relative;
+top:3px;
+right: 380px;
+}
+
+/* Links in header */
+.header .menulink {
+display: none;
+flex-direction: column; 
+border-top: 10px solid black;
+list-style-type: none;
+background-color:gray;
+color: white;
+gap: 10px;
+padding-top: 1px;
+align-items: center;
+position: absolute;
+top:100px; 
+width:45%;
+left: -10px;
+border: none;
+}
+
+/* Hover effect on menu icon */
+
+.menu:hover + .menulink,
+.menulink.active {
+display: flex;
+}
+
+/* Hover effect on menu icon */
+.menu:hover {
+flex-grow: 1;
+border: 1px solid cyan;
+background-color: #007bff;
+}
+.top{
+display: none;
+}
+/* ///////////////////////////////////////////////////////////////////// */
+ .logo{
+  position: relative;
+  top:50px;
+  right: 380px;  
+}
+.video-container {
+position: relative;
+width: 100vw; /* Use viewport units instead of a percentage */
+height: 100px;
+
+padding-bottom: 60%; /* Adjust the padding-bottom value as per your requirement */
+ /* overflow: hidden;   */
+ /* Hide any overflowing content */
+z-index: 1;
+}
+  .video-container video {
+    position: absolute;
+    top: 3%;  
+    /* to revert back make top:30 */
+    left: 41%;
+    transform: translate(-50%, -50%); /* Center the video horizontally and vertically */
+    width: 100%;
+    height: 100%;
+    object-fit: covers;
+  }
+  .cart-counter {
+    position: absolute;
+    top: 75px;
+    right: 270px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 50%;
+  }
+  .cart {
+    max-width: 35px; /* Adjust the width as needed */
+    max-height: 35px; /* Adjust the height as needed */
+    position: relative;
+    top: 3%;  
+    right: 200px;
+
+}
+
+.user {
+    max-width: 35px; /* Adjust the width as needed */
+    max-height: 35px; /* Adjust the height as needed */
+    position: relative;
+    top: 3%;  
+    right: 180px;
+   
+}
+/* main body social icon */
+.link{
+height: 30px;
+width: 30px;
+display: flex;
+ flex: 1; 
+ flex-direction: column;
+ position: absolute;
+ top: 19%;
+ right: 20px;
+
+
+
+}
+.insta{
+height: 30px;
+width: 30px;
+display: flex;
+ flex: 1; 
+position: absolute;
+flex-direction: column;
+position: absolute;
+top: 27%;
+right: 20px;
+
+
+
+}
+.twit{
+height: 30px;
+width: 30px;
+display: flex;
+ flex: 1; 
+position: absolute;
+flex-direction: column;
+
+position: absolute;
+top: 35%;
+right: 20px;
+
+
+}
+
+.btnshop{
+position: relative;
+top: 130px;
+left: 70px;
+
+}
+.body2 {
+grid-area: body2;
+height: 200%;
+width: 30%;
+background-position: 50% 55%; 
+position: relative;
+top: -300px;
+left: 5px;
+
+}
+
+.title_body2 {
+
+position: relative;
+top: 30px;
+left: 170px;
+
+}
+.shoe-price2 {
+
+  position: relative;
+  top: 30px;
+  left: 170px;
+
+  
+  }
+
+
+
+  .middle .body3 {
+    height: 200%;
+    width: 30%;
+    background-position: 50% 60%;
+    position: relative;
+    top: -300px;
+    left: 5px;
+    
+  }
+  
+  .title_body3 {
+    position: relative;
+    top: 20px;
+    left: 170px;
+  }
+  
+  .middle .body3 .shoe-price {
+    position: absolute;
+    top: 50px;
+    left: 100%;
+    background-color: #1e2749;
+    padding: 5px 60px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+
+  }
+  
+
+  .body4 {
+    grid-area: body4;
+    position: relative;
+    top: -300px;
+    left: 5px;
+    width: 30%;
+    height: 200%;
+    background-position: 50% 55%;
+  }
+
+  .title_body4 {
+    position: relative;
+    top: 50px;
+    left: 170px;
+  }
+
+  .shoe-price4 {
+    position: relative;
+    top: 50px;
+    left: 170px;
+  }
+
+  .body5 {
+    grid-area: body5;
+    position: relative;
+    top: -300px;
+    left: 5px;
+    width: 30%;
+    height: 200%;
+    background-position: 50% 55%;
+  }
+
+  .title_body5 {
+    position: relative;
+    top: 50px;
+    left: 170px;
+  }
+
+  .shoe-price5 {
+    position: relative;
+    top: 50px;
+    left: 170px;
+  }
+
+  .body6 {
+    grid-area: body6;
+    position: relative;
+    top: -250px;
+    left: 1px;
+    width: 65%;
+    height: 300%;
+    background-position: 50% 55%;
+}
+
+.btnshowcase{
+position: relative;
+top: 90px;
+left: 80px;
+
+}
+.body7 {
+grid-area: body7;
+position: relative;
+top: -139px;
+left: 1px;
+width: 65%;
+height: 170%;
+background-position: 50% 55%;
+}
+.btnmen{
+position: relative;
+top: 130px;
+left: 80px;
+
+}
+.body8 {
+grid-area: body8;
+position: relative;
+top: -70px;
+left: 1px;
+width: 65%;
+height: 170%;
+background-position: 50% 55%;
+}
+.btnfemale{
+position: relative;
+top: 130px;
+left: 80px;
+
+}
+.body9{
+grid-area: body9;
+position: relative;
+top: 5px;
+left: 1px;
+width: 65%;
+height: 170%;
+background-position: 50% 55%;
+}
+.btnaccessories{
+position: relative;
+top: 130px;
+left: 80px;
+
+}
+.h1{
+position: relative;
+top: 150px;
+left: -500px;
+}
+.buttom{
+position: relative;
+top: 10px;
+left: -500px;
+}
+.h2{
+position: absolute;
+top: -20px;
+left: 290px;
+}
+.footer .link2 {
+text-decoration: none;
+color: black;
+padding: 1px;
+position: absolute;
+top: 50px;
+left: 790px;
+}
+.lin{
+display: none;}
+.in{
+display: none;}
+.tw{
+display: none;
+}
+
+/* footer payment icon */
+.amex{
+display: none;
+}
+.visa{
+display: none;
+
+}
+.paypal{
+display: none;
+}
+.sws {
+  list-style: none;
+  position: relative;
+  top: -150px;
+  left: 285px;
+  color: white;
+}
+.shoppingpolicy {
+  list-style: none;
+  position: relative;
+  top: -330px;
+  left: 300px;
+  color: white;
+}
+.Pm{
+  list-style: none;
+  position: relative;
+  top: -320px;
+  left: 300px;
+  color: white;
+}
+.sg{
+  list-style: none;
+  position: relative;
+  top: -320px;
+  left: 300px;
+  color: white;
+}
+.toppicks{display: none;}
+  }
+
+
+
+  /* tablet responsive */
+
+  @media (min-width: 481px) and (max-width: 1024px) {
+    #shoexdesc {
+      display: none;
+    }
+    
+    .upper {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "logo"
+        "header"
+        "top";
+    }
+  
+    .middle {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "body1"
+        "body2"
+        "body3"
+        "body4"
+        "body5"
+        "body6";
+    }
+  
+    .sub {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "body7"
+        "body8"
+        "body9";
+    }
+  
+    /* Menu icon */
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: transparent;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+      max-width: 50px;
+      max-height: 50px;
+      position: relative;
+      top: 3px;
+      right: 380px;
+    }
+  
+    /* Links in header */
+    .header .menulink {
+      display: none;
+      flex-direction: column; 
+      border-top: 10px solid black;
+      list-style-type: none;
+      background-color: gray;
+      color: white;
+      gap: 10px;
+      padding-top: 1px;
+      align-items: center;
+      position: absolute;
+      top: 100px; 
+      width: 45%;
+      left: -10px;
+      border: none;
+    }
+  
+    /* Hover effect on menu icon */
+    .menu:hover + .menulink,
+    .menulink.active {
+      display: flex;
+    }
+  
+    /* Hover effect on menu icon */
+    .menu:hover {
+      flex-grow: 1;
+      border: 1px solid cyan;
+      background-color: #007bff;
+    }
+  
+    .top {
+      display: none;
+    }
+  
+    .logo {
+      position: relative;
+      top: 50px;
+      right: 380px;  
+    }
+  
+    .video-container {
+      position: relative;
+      width: 100vw; /* Use viewport units instead of a percentage */
+      height: 100px;
+      padding-bottom: 60%; /* Adjust the padding-bottom value as per your requirement */
+      z-index: 1;
+    }
+  
+    .video-container video {
+      position: absolute;
+      top: 3%;  
+      left: 41%;
+      transform: translate(-50%, -50%); /* Center the video horizontally and vertically */
+      width: 125%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .cart-counter {
+      position: absolute;
+      top: 75px;
+      right: 160px;
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 3px 5px;
+      border-radius: 50%;
+    }
+  
+    .cart {
+      max-width: 35px;
+      max-height: 35px;
+      position: relative;
+      top: 3%;  
+      right: -50px;
+    }
+  
+    .user {
+      max-width: 35px;
+      max-height: 35px;
+      position: relative;
+      top: 3%;  
+      right: -50px;
+    }
+  
+    .link {
+      height: 30px;
+      width: 30px;
+      display: flex;
+      flex: 1; 
+      flex-direction: column;
+      position: absolute;
+      top: 19%;
+      right: 20px;
+    }
+  
+    .insta {
+      height: 30px;
+      width: 30px;
+      display: flex;
+      flex: 1; 
+      position: absolute;
+      flex-direction: column;
+      position: absolute;
+      top: 27%;
+      right: 20px;
+    }
+  
+    .twit {
+      height: 30px;
+      width: 30px;
+      display: flex;
+      flex: 1; 
+      position: absolute;
+      flex-direction: column;
+      position: absolute;
+      top: 35%;
+      right: 20px;
+    }
+  
+    .btnshop {
+      position: relative;
+      top: 250px;
+      left: 250px;
+    }
+  
+    .body2 {
+      grid-area: body2;
+      height: 200%;
+      width: 30%;
+      background-position: 50% 55%; 
+      position: relative;
+      top: -300px;
+      left: 5px;
+    }
+  
+    .title_body2 {
+      position: relative;
+      top: 30px;
+      left: 290px;
+    }
+  
+    .shoe-price2 {
+      position: relative;
+      top: 30px;
+      left: 290px;
+    }
+  
+    .middle .body3 {
+      height: 250%;
+      width: 30%;
+      background-position: 50% 60%;
+      position: relative;
+      top: -290px;
+      left: 5px;
+    }
+  
+    .title_body3 {
+      position: relative;
+      top: 20px;
+      left: 290px;
+    }
+  
+    .middle .body3 .shoe-price {
+      position: absolute;
+      top: 50px;
+      left: 290px;
+      background-color: #1e2749;
+      padding: 5px 95px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+  
+    .body4 {
+      grid-area: body4;
+      position: relative;
+      top: -285px;
+      left: 5px;
+      width: 30%;
+      height: 200%;
+      background-position: 50% 55%;
+    }
+  
+    .title_body4 {
+      position: relative;
+      top: 50px;
+      left: 290px;
+    }
+  
+    .shoe-price4 {
+      position: relative;
+      top: 50px;
+      left: 290px;
+    }
+  
+    .body5 {
+      grid-area: body5;
+      position: relative;
+      top: -270px;
+      left: 5px;
+      width: 30%;
+      height: 200%;
+      background-position: 50% 55%;
+    }
+  
+    .title_body5 {
+      position: relative;
+      top: 50px;
+      left: 290px;
+    }
+  
+    .shoe-price5 {
+      position: relative;
+      top: 50px;
+      left: 290px;
+    }
+  
+    .body6 {
+      grid-area: body6;
+      position: relative;
+      top: -250px;
+      left: 1px;
+      width: 100%;
+      height: 300%;
+      background-position: 50% 55%;
+    }
+  
+    .btnshowcase {
+      position: relative;
+      top: 90px;
+      left: 250px;
+      
+    }
+  
+    .body7 {
+      grid-area: body7;
+      position: relative;
+      top: -139px;
+      left: 1px;
+      width: 100%;
+      height: 170%;
+      background-position: 50% 20%;
+    }
+  
+    .btnmen {
+      position: relative;
+      top: 160px;
+      left: 250px;
+    }
+  
+    .body8 {
+      grid-area: body8;
+      position: relative;
+      top: -70px;
+      left: 1px;
+      width: 100%;
+      height: 170%;
+      background-position: 50% 15%;
+    }
+  
+    .btnfemale {
+      position: relative;
+      top: 160px;
+      left: 250px;
+    }
+  
+    .body9 {
+      grid-area: body9;
+      position: relative;
+      top: 5px;
+      left: 1px;
+      width: 100%;
+      height: 170%;
+      background-position: 50% 55%;
+    }
+  
+    .btnaccessories {
+      position: relative;
+      top: 160px;
+      left: 250px;
+    }
+  
+    .h1 {
+      position: relative;
+      top: 150px;
+      left: -500px;
+    }
+  
+    .buttom {
+      position: relative;
+      top: 10px;
+      left: -500px;
+    }
+  
+    .h2 {
+      position: absolute;
+      top: -20px;
+      left: 500px;
+    }
+  
+    .footer .link2 {
+      text-decoration: none;
+      color: black;
+      padding: 1px;
+      position: absolute;
+      top: 50px;
+      left: 1005px;
+    }
+  
+    .lin,
+    .in,
+    .tw {
+      display: none;
+    }
+  
+    .amex,
+    .visa,
+    .paypal {
+      display: none;
+    }
+  
+    .sws {
+      list-style: none;
+      position: relative;
+      top: -360px;
+      left: 210px;
+      color: white;
+    }
+  
+    .shoppingpolicy {
+      list-style: none;
+      position: relative;
+      top: -330px;
+      left: 230px;
+      color: white;
+    }
+  
+    .Pm {
+      list-style: none;
+      position: relative;
+      top: -320px;
+      left: 230px;
+      color: white;
+    }
+  
+    .sg {
+      list-style: none;
+      position: relative;
+      top: -320px;
+      left: 230px;
+      color: white;
+    }
+  
+    .toppicks {
+      display: none;
+    }
+  }
+  
